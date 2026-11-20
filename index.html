@@ -1399,7 +1399,7 @@ function nuevaInscripcion(){
     const m = monthsBetween(parseISO(nb.value), TODAY);
     const sid = salaFor(m);
     const h = document.getElementById('salaHint');
-    if (!nb.value || isNaN(m) || m < 0){ h.textContent = 'Revisá la fecha de nacimiento.'; return; }
+    if (!nb.value || isNaN(m) || m < 0){ h.textContent = 'Revise la fecha de nacimiento.'; return; }
     document.getElementById('ns').value = sid;
     const n = kidsOf(sid).length, s = SALA[sid];
     h.innerHTML = 'Edad: <b>'+ageLabel(m)+'</b> · sala sugerida: <b>'+esc(s.name)+'</b> · cupo '+n+'/'+s.cupo+
@@ -1860,7 +1860,7 @@ function prevCom(){
   const body = document.getElementById('cmBody').value.trim();
   const dest = to === 'all' ? 'todas las familias' : 'las familias de '+SALA[to].name;
   document.getElementById('cmPrev').textContent = 'Jardín Maternal Mi Solcito\n\n' +
-    (body || 'Escriba el aviso para verlo acá.') + '\n\n— Mensaje para ' + dest;
+    (body || 'Escriba el aviso para verlo aquí.') + '\n\n— Mensaje para ' + dest;
   if (sub && !body) document.getElementById('cmPrev').textContent = 'Jardín Maternal Mi Solcito\n\n' + sub + '\n\n— Mensaje para ' + dest;
 }
 function enviarComunicado(){
